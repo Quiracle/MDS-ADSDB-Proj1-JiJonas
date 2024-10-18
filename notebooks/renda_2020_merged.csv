@@ -1,0 +1,75 @@
+,Distric,Barris,RDLpc (€),Index (RDLpc),neighborhood,district_id,neighborhood_id
+0,Ciutat Vella,el Raval,11.178,0.54,el Raval,Q941385,Q1758503
+1,Ciutat Vella,el Barri Gòtic,15.99,0.77,el Barri Gòtic,Q941385,Q17154
+2,Ciutat Vella,la Barceloneta,13.246,0.64,la Barceloneta,Q941385,Q377070
+3,Ciutat Vella,"Sant Pere, Santa Caterina i la Ribera",16.77,0.81,"Sant Pere, Santa Caterina i la Ribera",Q941385,Q2442135
+4,l'Eixample,el Fort Pienc,21.045,1.02,el Fort Pienc,Q64124,Q2107762
+5,l'Eixample,la Sagrada Família,17.116,0.83,la Sagrada Família,Q64124,Q2470217
+6,l'Eixample,la Dreta de l'Eixample,27.942,1.35,la Dreta de l'Eixample,Q64124,Q1904302
+7,l'Eixample,l'Antiga Esquerra de l'Eixample,24.766,1.2,l'Antiga Esquerra de l'Eixample,Q64124,Q3291762
+8,l'Eixample,la Nova Esquerra de l'Eixample,23.394,1.13,la Nova Esquerra de l'Eixample,Q64124,Q1026658
+9,l'Eixample,Sant Antoni,22.927,1.11,Sant Antoni,Q64124,Q720994
+10,Sants-Monjuic,el Poble Sec,16.392,0.79,el Poble Sec,Q753075,Q980253
+11,Sants-Monjuic,la Marina del Prat Vermell,13.232,0.64,la Marina del Prat Vermell,Q753075,Q3596095
+12,Sants-Monjuic,la Marina de Port,15.374,0.74,la Marina de Port,Q753075,Q3751076
+13,Sants-Monjuic,la Font de la Guatlla,19.137,0.93,la Font de la Guatlla,Q753075,Q3750859
+14,Sants-Monjuic,Hostafrancs,18.307,0.88,Hostafrancs,Q753075,Q3750929
+15,Sants-Monjuic,la Bordeta,18.693,0.9,la Bordeta,Q753075,Q3753110
+16,Sants-Monjuic,Sants - Badal,18.063,0.87,Sants - Badal,Q753075,Q3596096
+17,Sants-Monjuic,Sants,20.348,0.99,Sants,Q753075,Q2476184
+18,Les Corts,les Corts,27.702,1.34,les Corts,Q959944,Q3296693
+19,Les Corts,la Maternitat i Sant Ramon,21.313,1.03,la Maternitat i Sant Ramon,Q959944,Q3297056
+20,Les Corts,Pedralbes,43.27,2.09,Pedralbes,Q959944,Q2562684
+21,Les Corts,"Vallvidrera, el Tibidabo i les Planes",30.875,1.49,"Vallvidrera, el Tibidabo i les Planes",Q1765582,Q3310216
+22,Sarria - Sant Gervasi,Sarrià,33.948,1.64,Sarrià,Q1765582,Q3043699
+23,Sarria - Sant Gervasi,les Tres Torres,49.436,2.39,les Tres Torres,Q1765582,Q3297896
+24,Sarria - Sant Gervasi,Sant Gervasi - la Bonanova,47.527,2.3,Sant Gervasi - la Bonanova,Q1765582,Q3321657
+25,Sarria - Sant Gervasi,Sant Gervasi - Galvany,36.755,1.78,Sant Gervasi - Galvany,Q1765582,Q3389521
+26,Sarria - Sant Gervasi,el Putxet i el Farró,27.647,1.34,el Putxet i el Farró,Q1765582,Q3321805
+27,Gracia,Vallcarca i els Penitents,23.656,1.14,Vallcarca i els Penitents,Q852697,Q2057331
+28,Gracia,el Coll,19.309,0.93,el Coll,Q852697,Q1932090
+29,Gracia,la Salut,27.55,1.33,la Salut,Q852697,Q3320699
+30,Gracia,la Vila de Gràcia,25.217,1.22,la Vila de Gràcia,Q852697,Q2741611
+31,Gracia,el Camp d'en Grassot i Gràcia Nova,23.132,1.12,el Camp d'en Grassot i Gràcia Nova,Q852697,Q2994821
+32,Horta Guinardo,el Baix Guinardó,22.135,1.07,el Baix Guinardó,Q1771488,Q3297875
+33,Horta Guinardo,Can Baró,19.194,0.93,Can Baró,Q1771488,Q3321797
+34,Horta Guinardo,el Guinardó,23.461,1.13,el Guinardó,Q1771488,Q3045547
+35,Horta Guinardo,la Font d'en Fargues,23.416,1.13,la Font d'en Fargues,Q1771488,Q3297889
+36,Horta Guinardo,el Carmel,19.576,0.95,el Carmel,Q1771488,Q3319498
+37,Horta Guinardo,la Teixonera,15.799,0.76,la Teixonera,Q1771488,Q3320705
+38,Horta Guinardo,Sant Genís dels Agudells,18.552,0.9,Sant Genís dels Agudells,Q1771488,Q3298510
+39,Horta Guinardo,Montbau,20.257,0.98,Montbau,Q1771488,Q3298502
+40,Horta Guinardo,la Vall d'Hebron,24.367,1.18,la Vall d'Hebron,Q1771488,Q3298492
+41,Horta Guinardo,la Clota,17.606,0.85,la Clota,Q1771488,Q3320857
+42,Horta Guinardo,Horta,19.805,0.96,Horta,Q1771488,Q15225338
+43,Nou Barris,Vilapicina i la Torre Llobeta,18.005,0.87,Vilapicina i la Torre Llobeta,Q1641049,Q3320806
+44,Nou Barris,Porta,15.896,0.77,Porta,Q1641049,Q3750558
+45,Nou Barris,el Turó de la Peira,11.1,0.54,el Turó de la Peira,Q1641049,Q524311
+46,Nou Barris,Can Peguera,15.326,0.74,Can Peguera,Q1641049,Q3320716
+47,Nou Barris,la Guineueta,17.897,0.87,la Guineueta,Q1641049,Q2736697
+48,Nou Barris,Canyelles,18.789,0.91,Canyelles,Q1641049,Q3751386
+49,Nou Barris,les Roquetes,13.779,0.67,les Roquetes,Q1641049,Q1627690
+50,Nou Barris,Verdun,13.132,0.64,Verdun,Q1641049,Q3750551
+51,Nou Barris,la Prosperitat,15.99,0.77,la Prosperitat,Q1641049,Q3750926
+52,Nou Barris,la Trinitat Nova,15.607,0.75,la Trinitat Nova,Q1641049,Q3750932
+53,Nou Barris,Torre Baró,13.479,0.65,Torre Baró,Q1641049,Q3750940
+54,Nou Barris,Ciutat Meridiana,11.352,0.55,Ciutat Meridiana,Q1641049,Q3320722
+55,Nou Barris,Vallbona,11.825,0.57,Vallbona,Q1641049,Q3751072
+56,Sant Andreu,la Trinitat Vella,13.73,0.66,la Trinitat Vella,Q1650230,Q6746220
+57,Sant Andreu,Baró de Viver,14.34,0.69,Baró de Viver,Q1650230,Q1425291
+58,Sant Andreu,el Bon Pastor,14.375,0.69,el Bon Pastor,Q1650230,Q3319496
+59,Sant Andreu,Sant Andreu,20.114,0.97,Sant Andreu,Q1650230,Q990510
+60,Sant Andreu,la Sagrera,18.586,0.9,la Sagrera,Q1650230,Q3773462
+61,Sant Andreu,el Congrés i els Indians,18.836,0.91,el Congrés i els Indians,Q1650230,Q3813818
+62,Sant Andreu,Navas,18.941,0.92,Navas,Q1650230,Q3813816
+63,Sant Marti,el Camp de l'Arpa del Clot,20.184,0.98,el Camp de l'Arpa del Clot,Q250935,Q3294602
+64,Sant Marti,el Clot,23.287,1.13,el Clot,Q250935,Q2979686
+65,Sant Marti,el Parc i la Llacuna del Poblenou,20.413,0.99,el Parc i la Llacuna del Poblenou,Q250935,Q3294440
+66,Sant Marti,la Vila Olímpica del Poblenou,29.097,1.41,la Vila Olímpica del Poblenou,Q250935,Q1167101
+67,Sant Marti,el Poblenou,22.005,1.06,el Poblenou,Q250935,Q1404773
+68,Sant Marti,Diagonal Mar i el Front Marítim del Poblenou,37.346,1.81,Diagonal Mar i el Front Marítim del Poblenou,Q250935,Q2736444
+69,Sant Marti,el Besòs i el Maresme,15.07,0.73,el Besòs i el Maresme,Q250935,Q2390761
+70,Sant Marti,Provençals del Poblenou,20.246,0.98,Provençals del Poblenou,Q250935,Q6273541
+71,Sant Marti,Sant Martí de Provençals,17.346,0.84,Sant Martí de Provençals,Q250935,Q3773169
+72,Sant Marti,la Verneda i la Pau,15.07,0.73,la Verneda i la Pau,Q250935,Q542473
+73,,BCN,20.667,1.0,,,
