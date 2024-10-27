@@ -1,0 +1,13 @@
+size: Remove records with largest value higher than 1000 m2. Although with multivariate analysis it could not be an outlie (massions or country), but we Will exclude it to not create disturbs to our data. it Will hightly impact the profiling
+
+4+1+2+4+2+1+1+3+2+2+3+1+1+7+2
+
+Price: remove record with Price higher than 1.000.000
+
+operation: remove rent operation,which represents 150/21223 % cases
+
+province: remove province not in Barcelona
+
+municipality: remove "other" municipality
+
+country is redundant because all belong to Spain
