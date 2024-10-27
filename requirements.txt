@@ -4,3 +4,4 @@ pandas
 numpy
 dotenv
 python-dotenv
+sweetviz
