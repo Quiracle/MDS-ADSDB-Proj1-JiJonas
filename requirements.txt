@@ -5,3 +5,5 @@ numpy
 dotenv
 python-dotenv
 sweetviz
+streamlit
+streamlit_extras
