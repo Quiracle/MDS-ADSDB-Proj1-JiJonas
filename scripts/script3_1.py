@@ -66,7 +66,7 @@ def profile_database(db_path, output_path):
 
 
 def run():
-    profile_database('./trusted_zone/trusted.db', './trusted_zone/')
+    profile_database('./trusted_zone/trusted.db', './plots/trusted_profiling')
 
 
 

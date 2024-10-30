@@ -55,7 +55,7 @@ def remove_income_outliers(db_path):
         # Count initial number of records
         initial_count = conn.execute(f"SELECT COUNT(*) FROM {table_name};").fetchone()[0]
 
-        conn.execute(f"DELETE FROM {table_name} WHERE Distric IS NULL;")
+        conn.execute(f"DELETE FROM {table_name} WHERE district IS NULL;")
         
         # Count final number of records
         final_count = conn.execute(f"SELECT COUNT(*) FROM {table_name};").fetchone()[0]

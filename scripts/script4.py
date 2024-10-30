@@ -2,19 +2,17 @@ import duckdb
 import os
 
 
-trusted_db_path = './trusted_zone/trusted.db'
-exploitation_folder = './exploitation_zone/'
+SOURCE_DB = './trusted_zone/trusted.db'
+DESTINATION_FOLDER = './exploitation_zone/'
 
-os.makedirs(exploitation_folder, exist_ok=True)
+DESTINATION_DB = os.path.join(DESTINATION_FOLDER, 'exploitation.db')
 
-exploitation_db_path = os.path.join(exploitation_folder, 'exploitation.db')
-
-def create_connections():
+def create_connections(source, destination):
     # Connect to the existing trusted.db
-    trusted_con = duckdb.connect(database=trusted_db_path)
+    trusted_con = duckdb.connect(database=source)
 
     # Connect to the new exploitation.db
-    exploitation_con = duckdb.connect(database=exploitation_db_path)
+    exploitation_con = duckdb.connect(database=destination)
     return trusted_con, exploitation_con
 
 def drop_tables(tables, exploitation_con):
@@ -159,7 +157,12 @@ def close_connections(trusted_con, exploitation_con):
     exploitation_con.close()
 
 def run():
-    trusted_con, exploitation_con = create_connections()
+    if not os.path.exists(SOURCE_DB):
+        return (f"File not found: {SOURCE_DB}")
+
+    os.makedirs(DESTINATION_FOLDER, exist_ok=True)
+
+    trusted_con, exploitation_con = create_connections(SOURCE_DB, DESTINATION_DB)
 
     tables_to_drop = ['house', 'idealista', 'income', 'neighborhood']
     drop_tables(tables_to_drop, exploitation_con)
@@ -169,6 +172,8 @@ def run():
     close_connections(trusted_con, exploitation_con)
 
 if __name__ == "__main__":
+    os.makedirs(exploitation_folder, exist_ok=True)
+
     trusted_con, exploitation_con = create_connections()
 
     tables_to_drop = ['house', 'idealista', 'income', 'neighborhood']

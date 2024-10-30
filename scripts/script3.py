@@ -1,7 +1,14 @@
 import duckdb
 import pandas as pd
 import numpy as np
+import os
 
+SOURCE_FOLDER = "./formatted_zone"
+DESTINATION_FOLDER = "./trusted_zone"
+
+SOURCE_DB = f"{SOURCE_FOLDER}/formatted.db"
+
+DESTINATION_DB = f"{DESTINATION_FOLDER}/trusted.db"
 
 def merge_tables_by_keyword(db_path, keyword):
     # Connect to the DuckDB database
@@ -96,6 +103,11 @@ def drop_unwanted_columns(db_path, table_name):
     output_conn.close()
 
 def run():
-    merge_and_save_all_groups('./formatted_zone/formatted.db', './trusted_zone/trusted.db')
-    drop_unwanted_columns('./trusted_zone/trusted.db', 'idealista')
+    if not os.path.exists(SOURCE_DB):
+        return (f"File not found: {SOURCE_DB}")
+    if not os.path.exists(DESTINATION_FOLDER):
+        os.makedirs(DESTINATION_FOLDER)  # Create the destination folder if it doesn't exist
+
+    merge_and_save_all_groups(SOURCE_DB, DESTINATION_DB)
+    drop_unwanted_columns(DESTINATION_DB, 'idealista')
 

@@ -1,9 +1,10 @@
+setuptools
 duckdb
 requests
 pandas
 numpy
-dotenv
-python-dotenv
+python-dotenv 
 sweetviz
 streamlit
 streamlit_extras
+seaborn

@@ -2,7 +2,8 @@ from os.path import isfile, join, isdir
 import duckdb
 import os
 
-DB_PATH = "./formatted_zone/formatted.db"
+DB_FOLDER = "./formatted_zone"
+DB_PATH = f"{DB_FOLDER}/formatted.db"
 SOURCE = './persistent_landing/'
 
 def getAllFilesRecursive(root):
@@ -45,6 +46,9 @@ def load_database():
     except FileNotFoundError:
         return f"Source path {SOURCE} not found"
 def run():
+    if not os.path.exists(DB_FOLDER):
+        os.makedirs(DB_FOLDER)  # Create the destination folder if it doesn't exist
+
     return load_database()
 
 if __name__ == "__main__":

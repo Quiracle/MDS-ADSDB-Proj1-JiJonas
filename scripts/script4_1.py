@@ -62,7 +62,7 @@ def profile_database(db_path, output_path):
     conn.close()
 
 def run():
-    profile_database('./trusted_zone/trusted.db', './trusted_zone/')
+    profile_database('./trusted_zone/trusted.db', './plots/exploitation_profiling')
 
 
 

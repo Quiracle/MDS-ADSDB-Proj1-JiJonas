@@ -5,21 +5,22 @@ from datetime import datetime
 import pandas as pd
 from customized_profiling import customized_profiling
 
-
-con = duckdb.connect('./formatted_zone/formatted.db')
-con.sql("SELECT table_name FROM information_schema.tables WHERE table_schema = 'main';")
+DB_PATH = './formatted_zone/formatted.db'
 
 
-con.close()
+def create_connection(path):
+    return duckdb.connect(path)
 
 
 def data_profiling(db_path, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    
-    # Connect to the DuckDB database
-    conn = duckdb.connect(db_path)
-    
+    try:
+        # Connect to the DuckDB database
+        conn = duckdb.connect(db_path)
+    except FileNotFoundError:
+        print("Database folder does not exist")
+        return
     # Get list of all tables in the database
     tables = conn.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'main';").fetchall()
     
@@ -69,9 +70,7 @@ def data_profiling(db_path, output_dir):
     conn.close()
 
 def run():
-    data_profiling('./formatted_zone/formatted.db', './formatted_zone/')
-
-
+    data_profiling(DB_PATH, './plots/formatted_profiling')
 
 
 
