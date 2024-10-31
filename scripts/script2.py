@@ -25,6 +25,7 @@ def getAllFilesRecursive(root):
 def load_database():
     try:
         files = getAllFilesRecursive(SOURCE)
+        table_number = 0
         with duckdb.connect(DB_PATH) as con:
             con.sql("""
                 INSTALL spatial;
@@ -37,12 +38,12 @@ def load_database():
                 if filename[-1] == 'xlsx':
                     read_function = 'st_read'
                 table_name = '_'.join(filename[0].split('_')[::-1])
-                con.execute(f"DROP TABLE IF EXISTS {table_name}")
                 con.sql(f"CREATE TABLE IF NOT EXISTS {table_name} AS FROM {read_function}('{file}');")
-                print(f"Created table {table_name}")
+                print(f"Reading file {filename[0]}")
+                table_number += 1
                 if filename[0].split('_')[0].isdigit():
                     con.sql(f"ALTER TABLE {table_name} ADD COLUMN IF NOT EXISTS timestamp VARCHAR DEFAULT '{'-'.join(filename[0].split('_')[:-1])}';")
-        return "Formatting was executed correctly"
+        return f"Formatting was executed correctly, database has {table_number} tables"
     except FileNotFoundError:
         return f"Source path {SOURCE} not found"
 def run():

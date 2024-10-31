@@ -2,7 +2,7 @@ import streamlit as st
 import io
 from contextlib import redirect_stdout
 import os
-from scripts import script0, script1, script2, script2_1, script3, script3_1, script3_2, script3_3, script3_4, script4, script4_1
+from scripts import script0, script1, script2, script2_1, script3, script3_1, script3_2, script3_3, script3_4, script4, script4_1, script4_2
 from scripts.script1 import DESTINATION_FOLDER as persistent_folder
 from streamlit_extras.bottom_container import bottom
 from PIL import Image
@@ -100,7 +100,11 @@ with st.sidebar:
 
     if st.button("Apply profiling on exploitation zone"):
         fig, output = capture_output(script4_1.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit    
+        st.write(fig)  # Display the figure in Streamlit   
+
+    if st.button("Get KPIs"):
+        fig, output = capture_output(script4_2.run)  # Call the plot function from plot1.py
+        st.write(fig)  # Display the figure in Streamlit     
 
 
 if view_type == "Text View":
