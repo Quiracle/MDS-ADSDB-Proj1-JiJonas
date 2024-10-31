@@ -73,4 +73,7 @@ def run():
     data_profiling(DB_PATH, './plots/formatted_profiling')
 
 
+if __name__ == "__main__":
+    data_profiling(DB_PATH, './plots/formatted_profiling')
+
 

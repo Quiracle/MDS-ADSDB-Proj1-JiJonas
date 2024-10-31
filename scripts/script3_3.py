@@ -152,4 +152,6 @@ def run():
     consistent_formatting_idealista_script('./trusted_zone/trusted.db', table_name='idealista')
     consistent_formatting_income_script('./trusted_zone/trusted.db', 'income')
 
-
+if __name__ == "__main__":
+    consistent_formatting_idealista_script('./trusted_zone/trusted.db', table_name='idealista')
+    consistent_formatting_income_script('./trusted_zone/trusted.db', 'income')

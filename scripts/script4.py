@@ -172,9 +172,11 @@ def run():
     close_connections(trusted_con, exploitation_con)
 
 if __name__ == "__main__":
-    os.makedirs(exploitation_folder, exist_ok=True)
+    if not os.path.exists(SOURCE_DB):
+        exit 
+    os.makedirs(DESTINATION_FOLDER, exist_ok=True)
 
-    trusted_con, exploitation_con = create_connections()
+    trusted_con, exploitation_con = create_connections(SOURCE_DB, DESTINATION_DB)
 
     tables_to_drop = ['house', 'idealista', 'income', 'neighborhood']
     drop_tables(tables_to_drop, exploitation_con)

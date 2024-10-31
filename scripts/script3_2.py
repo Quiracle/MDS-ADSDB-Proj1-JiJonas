@@ -39,4 +39,6 @@ def deduplication(db_path):
 def run():
     deduplication('./trusted_zone/trusted.db')
 
+if __name__ == "__main__":
+    deduplication('./trusted_zone/trusted.db')
 

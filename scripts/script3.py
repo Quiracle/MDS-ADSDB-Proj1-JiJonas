@@ -111,3 +111,11 @@ def run():
     merge_and_save_all_groups(SOURCE_DB, DESTINATION_DB)
     drop_unwanted_columns(DESTINATION_DB, 'idealista')
 
+if __name__ == "__main__":
+    if not os.path.exists(SOURCE_DB):
+        exit
+    if not os.path.exists(DESTINATION_FOLDER):
+        os.makedirs(DESTINATION_FOLDER)  # Create the destination folder if it doesn't exist
+
+    merge_and_save_all_groups(SOURCE_DB, DESTINATION_DB)
+    drop_unwanted_columns(DESTINATION_DB, 'idealista')

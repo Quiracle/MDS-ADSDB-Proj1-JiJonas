@@ -52,4 +52,6 @@ def run():
     return load_database()
 
 if __name__ == "__main__":
+    if not os.path.exists(DB_FOLDER):
+        os.makedirs(DB_FOLDER)  # Create the destination folder if it doesn't exist
     load_database()

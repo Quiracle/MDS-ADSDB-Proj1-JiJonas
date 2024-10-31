@@ -74,4 +74,6 @@ def run():
     remove_idealista_outliers('./trusted_zone/trusted.db')
     remove_income_outliers('./trusted_zone/trusted.db')
 
-
+if __name__ == "__main__":
+    remove_idealista_outliers('./trusted_zone/trusted.db')
+    remove_income_outliers('./trusted_zone/trusted.db')
