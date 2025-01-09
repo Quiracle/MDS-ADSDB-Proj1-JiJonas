@@ -54,51 +54,51 @@ with st.sidebar:
     st.title("Run Python Scripts with Buttons")
 
     # Add buttons to execute each script
-    if st.button("Execute idealista API get"):
+    if st.button("0 - Execute idealista API get"):
         fig, output = capture_output(script0.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Load persistent landing zone"):
+    if st.button("1 - Load persistent landing zone"):
         fig, output = capture_output(script1.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Reset persistent zone"):
+    if st.button("1.1 - Reset persistent zone"):
         fig, output = capture_output(script1.reset)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Load persistent zone"):
+    if st.button("2 - Load fomatted zone"):
         fig, output = capture_output(script2.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Apply profiling on formatted zone"):
+    if st.button("2.1 - Apply profiling on formatted zone"):
         fig, output = capture_output(script2_1.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Load Trusted zone"):
+    if st.button("3 - Load Trusted zone"):
         fig, output = capture_output(script3.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Apply profiling on trusted zone"):
+    if st.button("3.1 - Apply profiling on trusted zone"):
         fig, output = capture_output(script3_1.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Apply deduplication on trusted zone"):
+    if st.button("3.2 - Apply deduplication on trusted zone"):
         fig, output = capture_output(script3_2.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Apply consistent formatting on trusted zone"):
+    if st.button("3.3 - Apply consistent formatting on trusted zone"):
         fig, output = capture_output(script3_3.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Remove outliers from trusted zone"):
+    if st.button("3.4 - Remove outliers from trusted zone"):
         fig, output = capture_output(script3_4.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Load exploitation zone"):
+    if st.button("4 - Load exploitation zone"):
         fig, output = capture_output(script4.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit
 
-    if st.button("Apply profiling on exploitation zone"):
+    if st.button("4.1 - Apply profiling on exploitation zone"):
         fig, output = capture_output(script4_1.run)  # Call the plot function from plot1.py
         st.write(fig)  # Display the figure in Streamlit   
 
