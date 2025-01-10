@@ -8,3 +8,4 @@ sweetviz
 streamlit
 streamlit_extras
 seaborn
+scikit-learn

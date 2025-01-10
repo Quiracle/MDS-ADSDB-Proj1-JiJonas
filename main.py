@@ -2,7 +2,7 @@ import streamlit as st
 import io
 from contextlib import redirect_stdout
 import os
-from scripts import script0, script1, script2, script2_1, script3, script3_1, script3_2, script3_3, script3_4, script4, script4_1, script4_2
+from scripts import script0, script1, script2, script2_1, script3, script3_1, script3_2, script3_3, script3_4, script4, script4_1, script4_2, script5, script5_1, script5_2
 from scripts.script1 import DESTINATION_FOLDER as persistent_folder
 from streamlit_extras.bottom_container import bottom
 from PIL import Image
@@ -55,56 +55,68 @@ with st.sidebar:
 
     # Add buttons to execute each script
     if st.button("0 - Execute idealista API get"):
-        fig, output = capture_output(script0.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script0.run) 
+        st.write(fig) 
 
     if st.button("1 - Load persistent landing zone"):
-        fig, output = capture_output(script1.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script1.run) 
+        st.write(fig) 
 
     if st.button("1.1 - Reset persistent zone"):
-        fig, output = capture_output(script1.reset)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script1.reset) 
+        st.write(fig) 
 
     if st.button("2 - Load fomatted zone"):
-        fig, output = capture_output(script2.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script2.run) 
+        st.write(fig) 
 
     if st.button("2.1 - Apply profiling on formatted zone"):
-        fig, output = capture_output(script2_1.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script2_1.run) 
+        st.write(fig) 
 
     if st.button("3 - Load Trusted zone"):
-        fig, output = capture_output(script3.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script3.run) 
+        st.write(fig) 
 
     if st.button("3.1 - Apply profiling on trusted zone"):
-        fig, output = capture_output(script3_1.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script3_1.run) 
+        st.write(fig) 
 
     if st.button("3.2 - Apply deduplication on trusted zone"):
-        fig, output = capture_output(script3_2.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script3_2.run) 
+        st.write(fig) 
 
     if st.button("3.3 - Apply consistent formatting on trusted zone"):
-        fig, output = capture_output(script3_3.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script3_3.run) 
+        st.write(fig) 
 
     if st.button("3.4 - Remove outliers from trusted zone"):
-        fig, output = capture_output(script3_4.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script3_4.run) 
+        st.write(fig) 
 
     if st.button("4 - Load exploitation zone"):
-        fig, output = capture_output(script4.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit
+        fig, output = capture_output(script4.run) 
+        st.write(fig) 
 
     if st.button("4.1 - Apply profiling on exploitation zone"):
-        fig, output = capture_output(script4_1.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit   
+        fig, output = capture_output(script4_1.run) 
+        st.write(fig)    
 
-    if st.button("Get KPIs"):
-        fig, output = capture_output(script4_2.run)  # Call the plot function from plot1.py
-        st.write(fig)  # Display the figure in Streamlit     
+    if st.button("4.2 - Get KPIs"):
+        fig, output = capture_output(script4_2.run) 
+        st.write(fig)      
+
+    if st.button("5 - Load Model Database"):
+        fig, output = capture_output(script5.run) 
+        st.write(fig)   
+
+    if st.button("5.1 - Apply feature selection"):
+        fig, output = capture_output(script5_1.run) 
+        st.write(fig)   
+
+    if st.button("5.2 - Generate predictive models"):
+        fig, output = capture_output(script5_2.run) 
+        st.write(fig)   
 
 
 if view_type == "Text View":

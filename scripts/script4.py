@@ -36,10 +36,13 @@ def create_neighborhood_table(trusted_con, exploitation_con):
     FROM income
     """).fetchall()
 
+    filtered_list = [tup for tup in NEIGHBORHOOD_data if None not in tup]
+
+
     exploitation_con.executemany("""
     INSERT INTO neighborhood (district, neighborhood) VALUES (?, ?)
     ON CONFLICT DO NOTHING
-    """, NEIGHBORHOOD_data)
+    """, filtered_list)
 
 def create_income_table(trusted_con, exploitation_con):
     exploitation_con.execute("""
@@ -77,9 +80,11 @@ def create_idealista_table(trusted_con, exploitation_con):
     FROM idealista
     """).fetchall()
 
+    unique_data = list({(row[0], row[3]): row for row in idealista_data}.values())
+
     exploitation_con.executemany("""
     INSERT INTO idealista (propertyCode, price, neighborhood, timestamp) VALUES (?, ?, ?, ?)
-    """, idealista_data)
+    """, unique_data)
 
 def create_house_table(trusted_con, exploitation_con):
     exploitation_con.execute("""
@@ -135,13 +140,15 @@ def create_house_table(trusted_con, exploitation_con):
     FROM idealista
     """).fetchall()
 
+    unique_data = list({(row[0], row[19]): row for row in house_data}.values())
+
     exploitation_con.executemany("""
     INSERT INTO house (
         propertyCode, floor, propertyType, size, status, newDevelopment, hasLift, rooms, 
         bathrooms, exterior, latitude, longitude, address, province, municipality, 
         district, country, neighborhood, priceByArea, timestamp
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, house_data)
+    """, unique_data)
 
 def create_all_tables(trusted_con, exploitation_con):
     create_neighborhood_table(trusted_con, exploitation_con)
